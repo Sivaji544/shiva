@@ -62,5 +62,5 @@ jobs:
         with:
           app-name: 'andhrapradesh'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_2A154A2B2330426382E70F11541C394B }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C08369973AB549BA88A6BFB7821A3E33 }}
           package: .
