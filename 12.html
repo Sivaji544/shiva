@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Validation</title>
+<script type="text/javascript">
+function checkValidation() {
+ var name,re_name,pass,cpass,re_pass,mailid,re_mailid,phno,re_phno;
+ name=document.reg.uname.value;
+ pass=document.reg.pwd.value;
+ cpass=document.reg.cpwd.value;
+ mailid=document.reg.email.value;
+ phno=document.reg.phno.value;
+ re_name=new RegExp("^[A-Za-z]+$","g");
+ re_pass=new RegExp("^[A-Za-z0-9]+$","g");
+ re_mailid=new RegExp("^[A-Za-z0-9]+[.|_]?[A-Za-z0-9]+@{1}[A-Za-z0-9]+.com$","g");
+ re_phno=new RegExp("\\d{10}","g");
+ if (name.match(re_name) && name.length>=6) {
+ if (pass.match(re_pass) && pass.length>=6) {
+ if (pass==cpass) { 
+ if (mailid.match(re_mailid)) {
+ if (phno.match(re_phno) && phno.length==10) {
+     window.alert("Enter details are valid.");
+ }
+ else{
+     window.alert("Invalid phone number.");
+     document.reg.phno.focus();
+ }
+ }
+ else{
+     window.alert("Invalid E-mail ID.");
+     document.reg.email.focus();
+ }
+ }
+ else{
+     window.alert("Password and Confirm password must be same.");
+     document.reg.cpwd.focus();
+ }
+ }
+ else{
+     window.alert("Invalid password.");
+     document.reg.pwd.focus();
+ }
+ }
+ else{
+     window.alert("Invalid user name.");
+     document.reg.uname.focus();
+ }
+}
+</script>
+</head>
+<body>
+<form name="reg">
+<h1 align="center"> REGISTRATION </h1>
+<table align="center" cellspacing="10">
+<tr>
+ <td>Name</td>
+ <td> <input name="uname" type="text"> </td>
+</tr>
+<tr>
+ <td>Password</td>
+ <td> <input name="pwd" type="password"> </td>
+</tr>
+<tr>
+ <td>Confirm Password</td>
+ <td> <input name="cpwd" type="password"> </td>
+</tr>
+<tr>
+ <td> E-mail ID </td>
+ <td> <input name="email" type="text"> </td>
+</tr>
+<tr>
+ <td> Phone Number </td>
+ <td> <input name="phno" type="text" maxlength="10"> </td>
+</tr>
+<tr>
+ <td colspan="2" align="center"><input type="button" value="Validate" onclick="checkValidation()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <input type="reset" value="Reset"></td>
+</tr>
+</table>
+</form>
+</body>
+</html>

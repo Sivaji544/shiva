@@ -1,0 +1,19 @@
+body{
+     background-color:red;
+}    
+h1{
+   padding:20px;
+}p{
+      padding:20px 50px;
+      border:2px solid green;
+      width:800px;
+      margin:auto;
+      background-color:white;
+    
+}
+ img > one{ padding:20px;
+     float:right;
+     height:250px;
+     width:200px;
+     
+}

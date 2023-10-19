@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Registration Form</title>
+  <script type="text/javascript">
+    function DisplayFormData(){
+      var uname = document.reg.uname.value;
+      var pwd = document.reg.pwd.value;
+      var gender = document.reg.gender.value;
+      var dob = document.reg.dob.value;
+      var email = document.reg.email.value;
+      var phno = document.reg.phno.value;
+      var branch = document.reg.branch.value;
+      var lk = document.reg.lk;
+      var address = document.reg.address.value;
+      document.write("User Name : "+uname);
+      document.write("<br>Password : "+pwd);
+      document.write("<br>Gender : "+gender);
+      document.write("<br>Date of Birth : "+dob);
+      document.write("<br>E-Mail ID : "+email);
+      document.write("<br>Phone Number : "+phno);
+      document.write("<br>Branch : "+branch);
+      document.write("<br>Languages Known : ");
+      for(var i=0;i<lk.length;i++){
+        if(lk[i].checked){
+          document.write(lk[i].value+" ");
+        }
+      }
+      document.write("<br>Address : "+address);
+    }
+  </script>
+</head>
+<body>
+  <form name="reg" method="post">
+    <h1 align="center"> REGISTRATION </h1>
+    <table align="center" cellspacing="10">
+      <tr>
+        <td>Name::</td>
+        <td><input name="uname" type="text"> </td>
+      </tr>
+      <tr>
+        <td>Password::</td>
+        <td><input name="pwd" type="password"> </td>
+      </tr>
+      <tr>
+        <td>Gender::</td>
+        <td><input name="gender" type="radio" value="Male">&nbsp;&nbsp;Male&nbsp;&nbsp;&nbsp;&nbsp;
+        <input name="gender" type="radio" value="Female">&nbsp;&nbsp;Female</td>
+      </tr>
+      <tr>
+        <td>Date of Birth</td>
+        <td><input type="date" name="dob" /></td>
+      </tr>
+      <tr>
+        <td>E-mail ID::</td>
+        <td><input name="email" type="text"> </td>
+      </tr>
+      <tr>
+        <td>Phone Number::</td>
+        <td> <input name="phno" type="text" maxlength="10"> </td>
+      </tr>
+      <tr>
+        <td>Select Branch::</td>
+        <td>
+          <select name="branch">
+            <option value="">--Select Branch--</option>
+            <option value="CIV">Civil</option>
+            <option value="EEE">EEE</option>
+            <option value="MECH">MECH</option>
+            <option value="ECE">ECE</option>
+            <option value="CSE">CSE</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top">Languages Known::</td>
+        <td>
+        <input name="lk" type="checkbox" value="English">&nbsp;English<br>
+        <input name="lk" type="checkbox" value="Telugu">&nbsp;Telugu<br>
+         <input name="lk" type="checkbox" value="Hindi">&nbsp;Hindi<br>
+        <input name="lk" type="checkbox" value="Tamil">&nbsp;Tamil<br>
+        </td>
+      </tr>
+      <tr>
+        <td>Address</td>
+        <td><textarea name="address" rows="5" cols="30"></textarea></td>
+      </tr>
+      <tr>
+        <td colspan="2" align="center"><input type="button" value="Register" onclick="DisplayFormData()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="reset" value="Cancel"></td>
+      </tr>
+    </table>
+  </form>
+</body>
+</html>

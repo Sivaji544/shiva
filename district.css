@@ -1,0 +1,18 @@
+body{
+  background-color: lightblue;
+  background-image:url(logo.png);
+  background-repeat:no-repeat;
+  background-position:center;
+  background-attachment:fixed;
+  background-size:250px;  
+    
+}
+table{
+      text-align:left;
+      padding:50px;
+}
+img{
+float:right;
+width:370px;
+
+}

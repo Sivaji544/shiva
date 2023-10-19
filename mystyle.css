@@ -1,0 +1,56 @@
+
+body{
+  background-color: lightblue;
+  background-image:url(logo.png);
+  background-repeat:no-repeat;
+  background-position:center;
+  background-attachment:fixed;
+  background-size:250px;  
+    
+}
+
+h1 {
+  color: navy;
+  text-decoration:underline;
+  
+  
+}
+ul{ 
+   margin:50px;
+   text-decoration:none;
+}
+h2{
+   background-color:violet;
+   padding-left:100px;
+}
+p{
+    background-color:violet;
+    border:3px solid black;
+    border-radius:13px;
+    
+    height:250px;
+    width:900px;
+    overflow:auto;
+    padding-left:10px;
+     padding-right:10px;
+     padding-top:10px;
+    text-align:justify;
+    
+    
+}
+#ps{
+    float:right;
+    width:200px;
+    padding-right:120px;
+}
+table{
+      text-align:left;
+      
+      
+}
+#new{
+      padding-left:10px;
+}
+
+
+   
